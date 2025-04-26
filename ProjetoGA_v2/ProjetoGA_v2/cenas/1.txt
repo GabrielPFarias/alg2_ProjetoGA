@@ -1,0 +1,9 @@
+1;1
+#
+Você está diante da Fortaleza das Sombras. Dizem que ela guarda o Olho de Virell, um artefato de poder sombrio.
+#
+I: garras das trevas;w;1;1;0
+#
+2.txt;3.txt
+#
+monstro1.txt
