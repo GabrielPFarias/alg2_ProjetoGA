@@ -35,4 +35,26 @@ bool string_to_bool(string str) {
 		return true;
 	}
 }
+Item* monta_item(string sItem) {
+	vector<string> partesItem = split(sItem, ';');
+	string itemNome = partesItem[0];
+	string itemTipo = partesItem[1];
+	bool itemCombate = string_to_bool(partesItem[2]);
+	int itemFA = stoi(partesItem[3]);
+	int itemDano = stoi(partesItem[4]);
+	Item itemMontado(itemNome, itemTipo, itemCombate, itemFA, itemDano);
+	return &itemMontado;
+}
 
+void pressiona_prosseguir() {
+	cout << "Pressione ENTER para prosseguir...";
+	cin.ignore();
+	cin.get();
+}
+
+string pressiona_escolha() {
+	string escolha = "";
+	cout << "Digite o número da opção desejada:";
+	cin >> escolha;
+	return escolha;
+}

@@ -34,15 +34,8 @@ void Cena::montaCena(){
 	bBatalha = verificar_valor(sHeader, 1);
 
 	texto = sTexto;
-
-	vector<string> partesItem = split(sItem, ';');
-	string itemNome = partesItem[0];
-	string itemTipo = partesItem[1];
-	bool itemCombate = string_to_bool(partesItem[2]);
-	int itemFA = stoi(partesItem[3]);
-	int itemDano = stoi(partesItem[4]);
-	Item itemMontado(itemNome, itemTipo, itemCombate, itemFA, itemDano);
-	objItem = itemMontado;
+	
+	pItem = monta_item(sItem);
 
 	vector<string> parteEscolhas = split(sEscolhas, ';');
 	escolhas = parteEscolhas;
@@ -69,7 +62,7 @@ vector<string> Cena::getEscolhas() {
 	return escolhas;
 }
 Item* Cena::getItem() {
-	return &objItem;
+	return pItem;
 }
 
 

@@ -2,6 +2,11 @@
 #include <string>
 using namespace std;
 
+enum TiposDeItens {
+	Porrete,
+	LivroDeFeiticos
+};
+
 class Item
 {
 public:

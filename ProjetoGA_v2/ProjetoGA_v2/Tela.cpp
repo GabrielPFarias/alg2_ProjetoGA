@@ -4,6 +4,6 @@ Tela::Tela(Cena* cena) {
 	this->cena = cena;
 }
 void Tela::exibir() {
-	//system("cls");
+	system("cls");
 	cout << cena->getTexto() << endl;
 }

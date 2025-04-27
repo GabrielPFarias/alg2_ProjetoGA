@@ -18,7 +18,7 @@ public:
     void setEnergia(int novaEnergia);
     void setSorte(int novaSorte);
 
-private:
+protected:
 	string nome;
 	int habilidade;
 	int energia;

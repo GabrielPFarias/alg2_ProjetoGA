@@ -27,7 +27,7 @@ private:
 	bool bItem;
 	bool bBatalha;
 	string texto;
-	Item objItem;
+	Item* pItem;
 	vector<string> escolhas;
 	string arqMonstro;
 };
