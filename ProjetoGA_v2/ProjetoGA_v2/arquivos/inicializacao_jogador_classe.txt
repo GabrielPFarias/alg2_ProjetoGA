@@ -1,0 +1,7 @@
+Você pode escolher entre dois tipos de jogador: MAGO ou GUERREIRO.
+Eles possuem histórias, mecânicas de jogo e habilidades diferentes.
+
+Qual é sua opção?
+
+(1) MAGO
+(2) GUERREIRO

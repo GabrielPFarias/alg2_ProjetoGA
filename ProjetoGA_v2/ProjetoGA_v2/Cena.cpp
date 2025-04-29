@@ -24,23 +24,43 @@ Cena::Cena(string nomeArquivo) {
 void Cena::montaCena(){
 	string conteudoArquivo = acessaArquivo(nomeArquivo);
 	vector<string> partesConteudo = split(conteudoArquivo, '#');
+	if (partesConteudo.size() < 6) {
+		partesConteudo.resize(6, "");
+	}
+	for (int i = 0; i < partesConteudo.size(); i++) {
+		removeQuebrasDeLinhaExtremidades(partesConteudo[i]);
+	}
 	string sHeader = partesConteudo[0];
 	string sTexto = partesConteudo[1];
 	string sItem = partesConteudo[2];
-	string sEscolhas = partesConteudo[3];
-	string sArquivoMonstro = partesConteudo[4];
+	string sTextosEscolhas = partesConteudo[3];
+	string sArquivosEscolhas = partesConteudo[4];
+	string sMonstro = partesConteudo[5];
 	
 	bItem = verificar_valor(sHeader, 0);
 	bBatalha = verificar_valor(sHeader, 1);
 
 	texto = sTexto;
-	
-	pItem = monta_item(sItem);
+	if (temItem()) {
+		pItem = new Item(NomeIndefinido);
+		pItem->montaItem(pItem->getNomesItem(sItem));
+	}
 
-	vector<string> parteEscolhas = split(sEscolhas, ';');
-	escolhas = parteEscolhas;
+	vector<string> parteTextosEscolhas = split(sTextosEscolhas, ';');
+	if (parteTextosEscolhas.size() < 2) {
+		parteTextosEscolhas.resize(2, "");
+	}
+	textosEscolhas = parteTextosEscolhas;
 
-	arqMonstro = sArquivoMonstro;
+	vector<string> parteArquivosEscolhas = split(sArquivosEscolhas, ';');
+	if (parteArquivosEscolhas.size() < 2) {
+		parteArquivosEscolhas.resize(2, "");
+	}
+	arquivosEscolhas = parteArquivosEscolhas;
+	if (temBatalha()) {
+		pMonstro = new Monstro(MonstroIndefinido);
+		pMonstro->montaMonstro(pMonstro->getNomeMonstro(sMonstro));
+	}
 }
 bool Cena::temItem() {
 	return bItem;
@@ -51,6 +71,12 @@ bool Cena::temBatalha() {
 void Cena::setArquivoCena(string nomeArquivo) {
 	this->nomeArquivo = nomeArquivo;
 	montaCena();
+	if (nomeArquivo == "arquivos/cenas/gameover.txt") {
+		bFim = true;
+	}
+	else {
+		bFim = false;
+	}
 }
 string Cena::getTexto() {
 	return texto;
@@ -58,13 +84,28 @@ string Cena::getTexto() {
 string Cena::getArqMonstro() {
 	return arqMonstro;
 }
-vector<string> Cena::getEscolhas() {
-	return escolhas;
+Monstro* Cena::getMonstro() {
+	return pMonstro;
+}
+vector<string> Cena::getTextosEscolhas() {
+	return textosEscolhas;
+}
+vector<string> Cena::getArquivosEscolhas() {
+	return arquivosEscolhas;
 }
 Item* Cena::getItem() {
 	return pItem;
 }
-
+bool Cena::temFim() {
+	return bFim;
+}
+void Cena::getEscolhaJogador(string escolha) {
+	while (escolha != "1" && escolha != "2" && escolha != "e") {
+		cout << u8"\nValor inválido. Enive outro." << endl;
+		escolha = pressiona_escolha();
+	}
+	setArquivoCena(arquivosEscolhas[stoi(escolha)-1]);
+}
 
 
 

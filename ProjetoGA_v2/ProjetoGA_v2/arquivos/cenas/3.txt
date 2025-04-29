@@ -1,0 +1,11 @@
+1;1
+#
+TERCEIRO ARQUIVOOOOOOOOOOOOO
+#
+I: garras das trevas;w;1;1;0
+#
+bla bla bla;teste teste test
+#
+arquivos/cenas/gameover.txt;arquivos/cenas/gameover.txt
+#
+monstro1.txt

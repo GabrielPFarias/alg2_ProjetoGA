@@ -6,6 +6,7 @@
 #include "Inventario.h"
 #include "Personagem.h"
 #include "util.h"
+#include "Item.h"
 
 using namespace std;
 
@@ -20,11 +21,16 @@ class Jogador : public Personagem
 public:
 	Jogador();
 	Jogador(string nome, int habilidade, int energia, int sorte, Classe classe, Inventario* inventario);
+	~Jogador() {
+		delete inventario;
+	}
 
+	string getNome();
 	Classe getClasse();
 	Inventario* getInventario();
 	bool getMagiaLiberada();
 
+	void setNome(string);
 	void setClasse(Classe);
 	void setInventario(Inventario*);
 	void atualizaMagiaLiberada();
@@ -32,7 +38,13 @@ public:
 	void inicializaJogador();
 	void defineAtributos();
 
+	void addItemInventario(Item*);
+	void imprimirInventario();
+	void imprimirInventarioResumido();
+
+	Classe escolhaMagoGuerreiro(string escolha);
 private:
+	string nome;
 	Classe classe;
 	Inventario* inventario;
 	bool magiaLiberada;

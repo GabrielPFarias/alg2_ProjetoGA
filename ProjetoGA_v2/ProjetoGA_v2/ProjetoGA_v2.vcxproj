@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Batalha.cpp" />
     <ClCompile Include="Cena.cpp" />
     <ClCompile Include="Inventario.cpp" />
     <ClCompile Include="Item.cpp" />
@@ -139,6 +140,7 @@
     <ClCompile Include="Tela.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Batalha.h" />
     <ClInclude Include="Cena.h" />
     <ClInclude Include="Inventario.h" />
     <ClInclude Include="Item.h" />

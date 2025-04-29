@@ -1,0 +1,6 @@
+Aqui voce define 3 atributos:
+Habilidade: Representa a destreza em combate. Base(6) Maximo(12)
+Energia: Pontos de vida. Base(12) Maximo(24)
+Sorte: Sorte para ser testada durante o jogo. Base(6) Maximo(12)
+
+Alem do valor base, voce ainda tem 12 pontos para distribuir entre os 3 atributos, respeitando o valor maximo.

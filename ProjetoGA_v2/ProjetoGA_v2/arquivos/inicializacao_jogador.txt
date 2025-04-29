@@ -1,6 +1,0 @@
-Você pode escolher entre dois tipos de jogador: MAGO ou GUERREIRO.\nEles possuem histórias, mecânicas de jogo e habilidades diferentes.\nqQual é sua opção\n\n(1) MAGO\n(2) GUERREIRO
-#
-Para inicializar o seu personagem, você deve escolher o valor para os atributos de HABILIDADE, ENERGIA e SORTE. 
-#
-Para isso voce tem 12 pontos. Distribua da forma que preferir sem que a soma ultrapasse esse limite. 
-#

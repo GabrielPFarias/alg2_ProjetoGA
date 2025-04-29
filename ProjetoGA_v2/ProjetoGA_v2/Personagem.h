@@ -6,9 +6,10 @@ using namespace std;
 class Personagem
 {
 public:
-	Personagem(string nome, int habilidade, int energia, int sorte);
+	Personagem(int habilidade, int energia, int sorte);
+    Personagem();
 
-    string getNome();
+    //string getNome();
     int getHabilidade();
     int getEnergia();
     int getSorte();
@@ -19,7 +20,7 @@ public:
     void setSorte(int novaSorte);
 
 protected:
-	string nome;
+	//string nome;
 	int habilidade;
 	int energia;
 	int sorte;

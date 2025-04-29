@@ -5,6 +5,7 @@
 #include <locale>
 
 int main() {
+
 	std::setlocale(LC_ALL, "pt_BR.UTF-8"); // Para usar acentos e cedilha no terminal
 	/*Cena cena("cenas/1.txt");
 	cena.montaCena();
@@ -18,4 +19,9 @@ int main() {
 	
 	Jogo jogo;
 	jogo.iniciaJogo();
+	/*Item item;
+	item.montaItem(Porrete);
+	Inventario inventario;
+	inventario.addItem(&item);
+	inventario.imprimir();*/
  }

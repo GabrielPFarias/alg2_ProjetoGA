@@ -9,7 +9,9 @@ class Tela
 public:
 	Tela();
 	Tela(Cena* cena);
-	void exibir();
+	void exibirTexto();
+	void exibirEscolhas();
+
 	void pressioneParaVoltar();
 	int pressioneAcao();
 	void setCena(Cena*);

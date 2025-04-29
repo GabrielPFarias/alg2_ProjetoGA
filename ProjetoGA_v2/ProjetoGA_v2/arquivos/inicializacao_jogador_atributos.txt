@@ -1,0 +1,2 @@
+Para inicializar o seu personagem, você deve escolher o valor para os atributos de HABILIDADE, ENERGIA e SORTE.
+Para isso voce tem 12 pontos. Distribua da forma que preferir sem que a soma ultrapasse esse limite. 

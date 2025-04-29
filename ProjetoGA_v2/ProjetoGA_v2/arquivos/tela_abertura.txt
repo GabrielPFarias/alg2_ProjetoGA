@@ -3,8 +3,8 @@ Bem-vindo jogador!! Para continuar selecione uma das opcoes abaixo
 
 1.Novo Jogo             2.Carregar Jogo
 3.Exibir Creditos       4.Encerrar
-
-Digite o numero da opcao desejada: 
 #
 #
+# 
 #
+end

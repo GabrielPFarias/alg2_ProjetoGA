@@ -9,6 +9,7 @@ class Inventario
 public:
 	Inventario();
 	Inventario(vector<Item*> itens, int provisao, int tesouro);
+	~Inventario();
 	
 	vector<Item*> getItens();
 	int getProvisao();
@@ -24,6 +25,8 @@ public:
 	void addTesouro(int);
 	void rmTesouro(int);
 
+	void imprimir();
+	void imprimirResumido(); //usado para a cena de batalha. imprime so so os nomes
 private:
 	vector<Item*> itens;
 	int provisao;

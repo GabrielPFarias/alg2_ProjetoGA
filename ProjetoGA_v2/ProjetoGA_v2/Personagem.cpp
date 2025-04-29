@@ -1,14 +1,18 @@
 #include "Personagem.h"
 
-Personagem::Personagem(string nome, int habilidade, int energia, int sorte) {
-    this->nome = nome;
+Personagem::Personagem(int habilidade, int energia, int sorte) {
     this->habilidade = habilidade;
     this->energia = energia;
     this->sorte = sorte;
 }
-string Personagem::getNome() {
-    return nome;
+Personagem::Personagem() {
+    habilidade = 0;
+    energia = 0;
+    sorte = 0;
 }
+/*string Personagem::getNome() {
+    return nome;
+}*/
 int Personagem::getHabilidade() {
     return habilidade;
 }
@@ -18,9 +22,9 @@ int Personagem::getEnergia() {
 int Personagem::getSorte() {
     return sorte;
 }
-void Personagem::setNome(string novoNome) {
+/*void Personagem::setNome(string novoNome) {
     nome = novoNome;
-}
+}*/
 void Personagem::setHabilidade(int novaHabilidade) {
     habilidade = novaHabilidade;
 }

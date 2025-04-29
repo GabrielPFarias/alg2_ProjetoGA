@@ -3,6 +3,7 @@
 #include <string>
 #include <vector>
 #include "util.h" 
+#include "Monstro.h"
 
 using namespace std;
 
@@ -12,6 +13,7 @@ public:
 	Cena();
 	Cena(string nomeArquivo);
 	void montaCena();
+	bool temFim();
 
 	bool temItem();
 	Item* getItem();
@@ -21,14 +23,21 @@ public:
 	string getNomeArquivo();
 	string getTexto();
 	string getArqMonstro();
-	vector<string> getEscolhas();
+	Monstro* getMonstro();
+	vector<string> getTextosEscolhas();
+	vector<string> getArquivosEscolhas();
+
+	void getEscolhaJogador(string);
 private:
 	string nomeArquivo;
 	bool bItem;
 	bool bBatalha;
 	string texto;
 	Item* pItem;
-	vector<string> escolhas;
+	vector<string> textosEscolhas;
+	vector<string> arquivosEscolhas;
 	string arqMonstro;
+	bool bFim;
+	Monstro* pMonstro;
 };
 

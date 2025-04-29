@@ -1,9 +1,11 @@
-1;1
+0;1
 #
-segundo arquivo aqum artefato de poder sombrio.
+Agora você ta numa batalha, to lendo o arquivo
 #
-I: garras das trevas;w;1;1;0
+end
 #
-2.txt;3.txt
+end
 #
-monstro1.txt
+arquivos/cenas/4.txt;arquivos/cenas/gameover.txt
+#
+dragao

@@ -1,8 +1,10 @@
 #pragma once
 #include<string>
+#include <locale>
 #include "Jogador.h"
 #include "cena.h"
 #include "Tela.h"
+#include "Batalha.h"
 
 using namespace std;
 
@@ -12,7 +14,6 @@ public:
 	Jogo();
 	Jogo(Jogador* jogador, Cena* cena);
 	void iniciaJogo();
-
 private:
 	Jogador* jogador;
 	Cena* cena;

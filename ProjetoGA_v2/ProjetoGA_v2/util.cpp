@@ -1,4 +1,5 @@
 #include "util.h"
+#include <locale>
 #include <fstream>
 #include <sstream>
 
@@ -35,26 +36,54 @@ bool string_to_bool(string str) {
 		return true;
 	}
 }
-Item* monta_item(string sItem) {
-	vector<string> partesItem = split(sItem, ';');
-	string itemNome = partesItem[0];
-	string itemTipo = partesItem[1];
-	bool itemCombate = string_to_bool(partesItem[2]);
-	int itemFA = stoi(partesItem[3]);
-	int itemDano = stoi(partesItem[4]);
+/*Item monta_item(NomesItens nomeItem) {
+	if (nomeItem == NomeIndefinido) {
+		Item itemMontado(NomeIndefinido, TipoIndefinido, false, 0, 0);
+		return itemMontado; // Retorna ponteiro nulo se a string estiver vazia
+	}
+	string arquivoDoItem = getArquivoItens(nomeItem);
+	string conteudoArquivoItem = acessaArquivo(arquivoDoItem);
+	vector<string> partesItem = split(conteudoArquivoItem, ';');
+	NomesItens itemNome = nomeItem;
+	TiposDeItens itemTipo = getTipoDeItens(nomeItem);
+	bool itemCombate = string_to_bool(partesItem[0]);
+	int itemFA = stoi(partesItem[1]);
+	int itemDano = stoi(partesItem[2]);
 	Item itemMontado(itemNome, itemTipo, itemCombate, itemFA, itemDano);
-	return &itemMontado;
-}
+	return itemMontado;
+}*/
 
 void pressiona_prosseguir() {
-	cout << "Pressione ENTER para prosseguir...";
+	cout << "\n" << "Pressione ENTER para prosseguir...";
 	cin.ignore();
 	cin.get();
 }
 
 string pressiona_escolha() {
+	setlocale(LC_ALL, "pt_BR.UTF-8");
 	string escolha = "";
-	cout << "Digite o número da opção desejada:";
+	cout << "\n" << u8"Digite o número da opção desejada:   "; //u8 para exbir os acentos
 	cin >> escolha;
 	return escolha;
 }
+
+void limpar_tela() {
+#ifdef _WIN32
+	system("cls");
+#else
+	system("clear");
+#endif
+}
+
+void removeQuebrasDeLinhaExtremidades(std::string& texto) {
+	// Remove '\n' do começo
+	while (!texto.empty() && texto.front() == '\n') {
+		texto.erase(0, 1);
+	}
+
+	// Remove '\n' do final
+	while (!texto.empty() && texto.back() == '\n') {
+		texto.pop_back();
+	}
+}
+
