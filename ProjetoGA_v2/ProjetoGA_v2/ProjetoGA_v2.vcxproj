@@ -151,6 +151,28 @@
     <ClInclude Include="Tela.h" />
     <ClInclude Include="util.h" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="arquivos\cenas\1.txt" />
+    <Text Include="arquivos\cenas\10.txt" />
+    <Text Include="arquivos\cenas\2.txt" />
+    <Text Include="arquivos\cenas\3.txt" />
+    <Text Include="arquivos\cenas\4.txt" />
+    <Text Include="arquivos\cenas\5.txt" />
+    <Text Include="arquivos\cenas\6.txt" />
+    <Text Include="arquivos\cenas\7.txt" />
+    <Text Include="arquivos\cenas\8.txt" />
+    <Text Include="arquivos\cenas\9.txt" />
+    <Text Include="arquivos\cenas\gameover.txt" />
+    <Text Include="arquivos\define_atributos.txt" />
+    <Text Include="arquivos\inicializacao_jogador_atributos.txt" />
+    <Text Include="arquivos\inicializacao_jogador_classe.txt" />
+    <Text Include="arquivos\itens\chave.txt" />
+    <Text Include="arquivos\itens\feitico.txt" />
+    <Text Include="arquivos\itens\livro_de_feiticos.txt" />
+    <Text Include="arquivos\itens\porrete.txt" />
+    <Text Include="arquivos\monstros\dragao.txt" />
+    <Text Include="arquivos\tela_abertura.txt" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

@@ -82,6 +82,7 @@ void Jogador::imprimirInventario() {
 	setlocale(LC_ALL, "pt_BR.UTF-8"); // Para usar acentos e cedilha no terminal
 	limpar_tela();
 	// Formatação com setw para alinhar as colunas
+	cout << "Digite 'e' sempre que quiser abrir o inventario" << endl;
 	cout << left << setw(20) << "NOME DO JOGADOR:" << setw(20) << getNome() << endl;
 	cout << left << setw(20) << "CLASSE:" << setw(20)
 		<< (classe == Mago ? "MAGO" : (classe == Guerreiro ? "GUERREIRO" : "INDEFINIDO")) << endl;

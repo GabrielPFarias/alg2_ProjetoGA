@@ -22,9 +22,9 @@ vector<string> split(string str, char delimitador) {
 	return partes;
 }
 bool verificar_valor(const string& sItem, int index) {
-	vector<string> partes = split(sItem, ';');
+	vector<string> partes = split(sItem, ';'); // Divide no formato item;batalha
 	if (index < partes.size()) {
-		return partes[index] == "1";
+		return partes[index] == "1"; // Verifica se o index (item ou batalha) tem valor 1
 	}
 	return false; 
 }

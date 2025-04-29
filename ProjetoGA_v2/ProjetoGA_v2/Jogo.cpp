@@ -20,6 +20,8 @@ void Jogo::iniciaJogo() {
 	switch (stoi(pressiona_escolha())) {
 	case 1:
 		jogador.inicializaJogador();
+		jogador.imprimirInventario();
+		pressiona_prosseguir();
 		cenaAtual.setArquivoCena("arquivos/cenas/1.txt");
 		break;
 	case 2:

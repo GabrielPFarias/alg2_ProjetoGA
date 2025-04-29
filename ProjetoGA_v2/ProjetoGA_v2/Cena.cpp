@@ -24,8 +24,8 @@ Cena::Cena(string nomeArquivo) {
 void Cena::montaCena(){
 	string conteudoArquivo = acessaArquivo(nomeArquivo);
 	vector<string> partesConteudo = split(conteudoArquivo, '#');
-	if (partesConteudo.size() < 6) {
-		partesConteudo.resize(6, "");
+	if (partesConteudo.size() < 6) { // caso o arquivo nao tenha 6 partes
+		partesConteudo.resize(6, ""); // formata o vetor em 6 partes
 	}
 	for (int i = 0; i < partesConteudo.size(); i++) {
 		removeQuebrasDeLinhaExtremidades(partesConteudo[i]);
@@ -37,8 +37,8 @@ void Cena::montaCena(){
 	string sArquivosEscolhas = partesConteudo[4];
 	string sMonstro = partesConteudo[5];
 	
-	bItem = verificar_valor(sHeader, 0);
-	bBatalha = verificar_valor(sHeader, 1);
+	bItem = verificar_valor(sHeader, 0); // Verifica se tem item na cena
+	bBatalha = verificar_valor(sHeader, 1); // Verifica se tem batalha na cena
 
 	texto = sTexto;
 	if (temItem()) {
