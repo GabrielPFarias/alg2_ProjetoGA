@@ -77,11 +77,11 @@ void Jogo::iniciaJogo() {
 void Jogo::salvar() {
 	setlocale(LC_ALL, "pt_BR.UTF-8"); // Para usar acentos e cedilha no terminal
 	limpar_tela();
-	cout << u8"Qual nome você deseja dar a esse save?" << endl;
+	cout << u8"Qual nome vocÃª deseja dar a esse save?" << endl;
 	string nomeJogo;
 	cin >> nomeJogo;
 	while (verificaArquivosExistentes(nomeJogo)) {
-		cout << u8"\nJá existe um save com esse nome. Escolha outro:  ";
+		cout << u8"\nJÃ¡ existe um save com esse nome. Escolha outro:  ";
 		cin >> nomeJogo;
 	}
 	ofstream arquivoSave("arquivos/saves/" + nomeJogo + ".txt");

@@ -11,18 +11,18 @@ public:
 
     //string getNome();
     int getHabilidade();
-    int getEnergia();
+    double getEnergia();
     int getSorte();
 
     void setNome(string novoNome);
     void setHabilidade(int novaHabilidade);
-    void setEnergia(int novaEnergia);
+    void setEnergia(double novaEnergia);
     void setSorte(int novaSorte);
 
 protected:
 	//string nome;
 	int habilidade;
-	int energia;
+    double energia;
 	int sorte;
 };
 

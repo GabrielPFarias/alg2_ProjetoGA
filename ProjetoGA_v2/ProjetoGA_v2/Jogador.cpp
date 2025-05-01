@@ -10,10 +10,10 @@ Jogador::Jogador(string nome, int habilidade, int energia, int sorte, Classe cla
 
 int pedirValor(string atributo, int* pontosRestantes, int minimoDepois) {
 	int valor;
-	cout << u8"\nVocÍ tem: " << *pontosRestantes << " pontos restantes.\nInsira o valor para " << atributo << ": ";
+	cout << u8"\nVoc√™ tem: " << *pontosRestantes << " pontos restantes.\nInsira o valor para " << atributo << ": ";
 	cin >> valor;
 	while (*pontosRestantes - valor < minimoDepois) {
-		cout << u8"Valor inv·lido. Tente novamente: ";
+		cout << u8"Valor inv√°lido. Tente novamente: ";
 		cin >> valor;
 	}
 	*pontosRestantes = *pontosRestantes - valor;
@@ -52,6 +52,7 @@ void Jogador::atualizaMagiaLiberada() {
 		}
 	}
 	*/
+
 }
 void Jogador::addItemInventario(Item* item) {
 	inventario->addItem(item);
@@ -64,7 +65,7 @@ void Jogador::inicializaJogador() {
 
 Classe Jogador::escolhaMagoGuerreiro(string escolha) {
 	while (escolha != "1" && escolha!= "2") {
-		cout << u8"\nValor inv·lido. Enive outro." << endl;
+		cout << u8"\nValor inv√°lido. Enive outro." << endl;
 		escolha = pressiona_escolha();
 	}
 	if (escolha == "1") {
@@ -81,7 +82,7 @@ Classe Jogador::escolhaMagoGuerreiro(string escolha) {
 void Jogador::imprimirInventario() {
 	setlocale(LC_ALL, "pt_BR.UTF-8"); // Para usar acentos e cedilha no terminal
 	limpar_tela();
-	// FormataÁ„o com setw para alinhar as colunas
+	// Formata√ß√£o com setw para alinhar as colunas
 	cout << "Digite 'e' sempre que quiser abrir o inventario" << endl;
 	cout << left << setw(20) << "NOME DO JOGADOR:" << setw(20) << getNome() << endl;
 	cout << left << setw(20) << "CLASSE:" << setw(20)
@@ -90,31 +91,31 @@ void Jogador::imprimirInventario() {
 	cout << left << setw(20) << "ENERGIA:" << setw(20) << getEnergia() << endl;
 	cout << left << setw(20) << "SORTE:" << setw(20) << getSorte() << endl;
 
-	// Adicionando uma linha em branco entre as seÁıes
+	// Adicionando uma linha em branco entre as se√ß√µes
 	cout << endl;
 
-	// Imprimir o invent·rio
-	cout << left << setw(20) << u8"INVENT¡RIO" << endl;
+	// Imprimir o invent√°rio
+	cout << left << setw(20) << u8"INVENT√ÅRIO" << endl;
 	cout << "  Itens:" << endl;
 
-	// Se o invent·rio estiver vazio
+	// Se o invent√°rio estiver vazio
 	if (inventario->getItens().empty()) {
-		cout << "Nenhum item no invent·rio." << endl;
+		cout << "Nenhum item no invent√°rio." << endl;
 	}
 	else {
-		// Caso contr·rio, imprimir os itens com formataÁ„o
+		// Caso contr√°rio, imprimir os itens com formata√ß√£o
 		for (Item* item : inventario->getItens()) {
 			cout << left << setw(20) << "    Nome:" << setw(30) << item->getStringNomesItem(item->getNome()) << endl;
 			cout << left << setw(20) << "    Tipo:" << setw(30) << item->getTipoDeItensSignificado(item->getTipo()) << endl;
-			cout << left << setw(20) << "    Combate:" << setw(30) << (item->getCombate() ? "Sim" : u8"N„o") << endl;
+			cout << left << setw(20) << "    Combate:" << setw(30) << (item->getCombate() ? "Sim" : u8"N√£o") << endl;
 			cout << left << setw(20) << "    FA:" << setw(30) << item->getFA() << endl;
 			cout << left << setw(20) << "    Dano:" << setw(30) << item->getDano() << endl;
 			cout << endl;  // Linha em branco entre os itens
 		}
 	}
 
-	// Imprimir provis„o e tesouro com formataÁ„o
-	cout << left << setw(20) << u8"PROVIS√O:" << setw(20) << inventario->getProvisao() << endl;
+	// Imprimir provis√£o e tesouro com formata√ß√£o
+	cout << left << setw(20) << u8"PROVIS√ÉO:" << setw(20) << inventario->getProvisao() << endl;
 	cout << left << setw(20) << "TESOURO:" << setw(20) << inventario->getTesouro() << endl;
 }
 void Jogador::imprimirInventarioResumido() {
@@ -156,6 +157,6 @@ string Jogador::getTodosDados() {
 	if (inventario)
 		conteudo = nome + ";" + sClasse + ";" + to_string(getHabilidade()) + ";" + to_string(getEnergia()) + ";"+ to_string(getSorte()) + ";" + inventario->getTodosDados();
 	else
-		conteudo = nome + ";" + sClasse + ";(sem invent·rio)";
+		conteudo = nome + ";" + sClasse + ";(sem invent√°rio)";
 	return conteudo;
 }
