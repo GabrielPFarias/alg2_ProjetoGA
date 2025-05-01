@@ -40,17 +40,7 @@ void Jogador::setInventario(Inventario* inventario) {
 	this->inventario = inventario;
 }
 void Jogador::atualizaMagiaLiberada() {
-	if (classe == Mago) {
-		magiaLiberada = true;
-	}
-	else if (classe == Guerreiro) {
-		if (inventario->temItemMagico()) {
-			magiaLiberada = true;
-		}
-		else {
-			magiaLiberada = false;
-		}
-	}
+	
 }
 void Jogador::addItemInventario(Item* item) {
 	inventario->addItem(item);

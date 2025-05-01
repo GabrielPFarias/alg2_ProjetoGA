@@ -16,13 +16,16 @@ public:
 	void iniciaBatalha();
 
 	bool bTestarSorte();
-	double testarSorte();
+	double geraValorAleatorio(double, double);
 	void geraMultiplicador();
 
 	void perguntaUsarInventario();
+	int get_resultado();
 private:
+	void turno();
 	Monstro* monstro;
 	Jogador* jogador;
 	double multiplicador;
+	int resultado;
 };
 

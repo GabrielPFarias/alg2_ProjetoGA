@@ -25,7 +25,6 @@ void Jogo::iniciaJogo() {
 		cenaAtual.setArquivoCena("arquivos/cenas/1.txt");
 		break;
 	case 2:
-		carregarJogo();
 
 		break;
 	case 3:
@@ -56,7 +55,7 @@ void Jogo::iniciaJogo() {
 					pressiona_prosseguir();
 				}
 				else if (escolha == "s") {
-					salvar();
+					
 				}
 				else {
 					cenaAtual.getEscolhaJogador(escolha);
@@ -65,12 +64,4 @@ void Jogo::iniciaJogo() {
 			}
 		}
 	}
-}
-void Jogo::salvar() {
-	limpar_tela();
-	cout << "Qual nome você deseja dar a esse "
-}
-
-carregearJogo{
-	cenaAtual = cenaque ta no arquivo;
 }

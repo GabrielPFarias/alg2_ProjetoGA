@@ -16,7 +16,7 @@ Personagem::Personagem() {
 int Personagem::getHabilidade() {
     return habilidade;
 }
-int Personagem::getEnergia() {
+double Personagem::getEnergia() {
     return energia;
 }
 int Personagem::getSorte() {
@@ -28,7 +28,7 @@ int Personagem::getSorte() {
 void Personagem::setHabilidade(int novaHabilidade) {
     habilidade = novaHabilidade;
 }
-void Personagem::setEnergia(int novaEnergia) {
+void Personagem::setEnergia(double novaEnergia) {
     energia = novaEnergia;
 }
 void Personagem::setSorte(int novaSorte) {
