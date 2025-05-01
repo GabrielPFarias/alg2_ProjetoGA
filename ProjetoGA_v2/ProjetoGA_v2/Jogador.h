@@ -43,6 +43,7 @@ public:
 	void imprimirInventarioResumido();
 
 	Classe escolhaMagoGuerreiro(string escolha);
+	string getTodosDados();
 private:
 	string nome;
 	Classe classe;

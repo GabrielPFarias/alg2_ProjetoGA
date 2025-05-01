@@ -87,3 +87,6 @@ void removeQuebrasDeLinhaExtremidades(std::string& texto) {
 	}
 }
 
+void cria_arquivo(string nomeArquivo) {
+	ofstream arquivo();
+}

@@ -16,7 +16,7 @@ Inventario::~Inventario() {
     setlocale(LC_ALL, "pt_BR.UTF-8");
     // Percorra o vetor e delete cada item dinamicamente alocado
     for (auto item : itens) {
-        delete item;  // Libera a memória alocada para cada item
+        delete item;  // Libera a memÃ³ria alocada para cada item
     }
 }
 
@@ -66,13 +66,13 @@ void Inventario::rmTesouro(int valor) {
     }
 }
 void Inventario::imprimir() {
-    cout << "Inventário:" << endl;
-    cout << "Provisão: " << provisao << endl;
+    cout << "InventÃ¡rio:" << endl;
+    cout << "ProvisÃ£o: " << provisao << endl;
     cout << "Tesouro: " << tesouro << endl;
 
     cout << "\nItens: " << endl;
     if (itens.empty()) {
-        cout << "Nenhum item no inventário." << endl;
+        cout << "Nenhum item no inventÃ¡rio." << endl;
     }
     else {
         for (size_t i = 0; i < itens.size(); ++i) {
@@ -81,7 +81,7 @@ void Inventario::imprimir() {
             cout << "  Tipo: " << itens[i]->getTipo() << endl;
             cout << "  FA: " << itens[i]->getFA() << endl;
             cout << "  Dano: " << itens[i]->getDano() << endl;
-            cout << "  Combate: " << (itens[i]->getCombate() ? "Sim" : "Não") << endl;
+            cout << "  Combate: " << (itens[i]->getCombate() ? "Sim" : "NÃ£o") << endl;
             cout << endl;
         }
     }
@@ -94,8 +94,19 @@ void Inventario::imprimirResumido() {
         string sItem = itens[i]->getStringNomesItem(nomeItem);
         sItens.push_back(sItem);
     }
-    cout << u8"Esses são os itens disponiveis:\n\n" << endl;
+    cout << u8"Esses sÃ£o os itens disponiveis:\n\n" << endl;
     for (i = 0;i < sItens.size(); i++) {
         cout << "(" << i + 1 << ") " << sItens[i] << "    ";
     }
+}
+string Inventario::getTodosDados(){
+    string conteudo;
+    int i;
+    for (size_t i = 0; i < itens.size(); i++) {
+        if (i > 0) {
+            conteudo += ", ";
+        }
+        conteudo += itens[i]->getStringNomesItem(itens[i]->getNome());
+    }
+    return conteudo;
 }
