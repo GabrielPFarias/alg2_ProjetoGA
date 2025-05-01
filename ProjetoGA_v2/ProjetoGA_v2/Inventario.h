@@ -27,6 +27,7 @@ public:
 
 	void imprimir();
 	void imprimirResumido(); //usado para a cena de batalha. imprime so so os nomes
+	string getTodosDados();
 private:
 	vector<Item*> itens;
 	int provisao;

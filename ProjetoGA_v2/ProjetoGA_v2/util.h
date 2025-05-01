@@ -25,3 +25,4 @@ void pressiona_prosseguir();
 string pressiona_escolha();
 void limpar_tela();
 void removeQuebrasDeLinhaExtremidades(string& texto);
+void cria_arquivo(string nomeArquivo);

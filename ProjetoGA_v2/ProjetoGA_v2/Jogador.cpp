@@ -40,7 +40,7 @@ void Jogador::setInventario(Inventario* inventario) {
 	this->inventario = inventario;
 }
 void Jogador::atualizaMagiaLiberada() {
-	if (classe == Mago) {
+	/*if (classe == Mago) {
 		magiaLiberada = true;
 	}
 	else if (classe == Guerreiro) {
@@ -51,6 +51,7 @@ void Jogador::atualizaMagiaLiberada() {
 			magiaLiberada = false;
 		}
 	}
+	*/
 }
 void Jogador::addItemInventario(Item* item) {
 	inventario->addItem(item);
@@ -143,3 +144,18 @@ void Jogador::defineAtributos() {
 	sorte = pedirValor("SORTE", &pontosRestantes, 0) + 6;
 }
 
+string Jogador::getTodosDados() {
+	string conteudo = "";
+	string sClasse = "";
+	if (classe == Mago) {
+		sClasse = "Mago";
+	}
+	else {
+		sClasse = "Guerreiro";
+	}
+	if (inventario)
+		conteudo = nome + ";" + sClasse + ";" + to_string(getHabilidade()) + ";" + to_string(getEnergia()) + ";"+ to_string(getSorte()) + ";" + inventario->getTodosDados();
+	else
+		conteudo = nome + ";" + sClasse + ";(sem inventário)";
+	return conteudo;
+}

@@ -99,4 +99,14 @@ void Inventario::imprimirResumido() {
         cout << "(" << i + 1 << ") " << sItens[i] << "    ";
     }
 }
-void
+string Inventario::getTodosDados(){
+    string conteudo;
+    int i;
+    for (size_t i = 0; i < itens.size(); i++) {
+        if (i > 0) {
+            conteudo += ", ";
+        }
+        conteudo += itens[i]->getStringNomesItem(itens[i]->getNome());
+    }
+    return conteudo;
+}

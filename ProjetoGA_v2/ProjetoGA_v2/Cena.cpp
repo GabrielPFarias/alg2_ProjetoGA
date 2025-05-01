@@ -101,10 +101,13 @@ bool Cena::temFim() {
 }
 void Cena::getEscolhaJogador(string escolha) {
 	while (escolha != "1" && escolha != "2" && escolha != "e") {
-		cout << u8"\nValor inválido. Enive outro." << endl;
+		cout << u8"\nValor inválido. Envie outro." << endl;
 		escolha = pressiona_escolha();
 	}
 	setArquivoCena(arquivosEscolhas[stoi(escolha)-1]);
+}
+string Cena::getNomeArquivo() {
+	return nomeArquivo;
 }
 
 
