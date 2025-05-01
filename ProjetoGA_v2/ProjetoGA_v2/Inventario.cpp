@@ -99,3 +99,4 @@ void Inventario::imprimirResumido() {
         cout << "(" << i + 1 << ") " << sItens[i] << "    ";
     }
 }
+void

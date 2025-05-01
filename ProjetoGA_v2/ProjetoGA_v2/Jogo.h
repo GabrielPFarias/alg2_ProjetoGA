@@ -14,6 +14,7 @@ public:
 	Jogo();
 	Jogo(Jogador* jogador, Cena* cena);
 	void iniciaJogo();
+	void salvar();
 private:
 	Jogador* jogador;
 	Cena* cena;
