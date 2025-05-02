@@ -98,15 +98,28 @@ void Inventario::imprimirResumido() {
     for (i = 0;i < sItens.size(); i++) {
         cout << "(" << i + 1 << ") " << sItens[i] << "    ";
     }
+    cout << "(" << i + 1 << ") " << "Cancelar" << "    \n";
 }
 string Inventario::getTodosDados(){
     string conteudo;
     int i;
+    conteudo = to_string(provisao);
+    conteudo = conteudo + "." + to_string(tesouro) + ".";
+
     for (size_t i = 0; i < itens.size(); i++) {
         if (i > 0) {
-            conteudo += ", ";
+            conteudo += ",";
         }
         conteudo += itens[i]->getStringNomesItem(itens[i]->getNome());
     }
     return conteudo;
+}
+
+bool Inventario::temItem(NomesItens nomeItem) {
+    for (int i = 0; i < itens.size(); i++) {
+        if (nomeItem == itens[i]->getNome()) {
+            return true;
+        }
+    }
+    return false;
 }

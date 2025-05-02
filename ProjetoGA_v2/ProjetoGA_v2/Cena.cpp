@@ -71,7 +71,7 @@ bool Cena::temBatalha() {
 void Cena::setArquivoCena(string nomeArquivo) {
 	this->nomeArquivo = nomeArquivo;
 	montaCena();
-	if (nomeArquivo == "arquivos/cenas/gameover.txt") {
+	if (nomeArquivo == "arquivos/cenas/gameover.txt" || nomeArquivo == "arquivos/cenas/victory_royale.txt") {
 		bFim = true;
 	}
 	else {
@@ -99,7 +99,7 @@ Item* Cena::getItem() {
 bool Cena::temFim() {
 	return bFim;
 }
-void Cena::getEscolhaJogador(string escolha) {
+void Cena::getProximaCena(string escolha) {
 	while (escolha != "1" && escolha != "2" && escolha != "e") {
 		cout << u8"\nValor inválido. Envie outro." << endl;
 		escolha = pressiona_escolha();

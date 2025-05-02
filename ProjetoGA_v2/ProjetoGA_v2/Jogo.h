@@ -6,6 +6,7 @@
 #include "cena.h"
 #include "Tela.h"
 #include "Batalha.h"
+#include <filesystem>
 
 using namespace std;
 
@@ -17,9 +18,11 @@ public:
 	void iniciaJogo();
 	void salvar();
 	void carregar();
+	void montaJogo(string conteudo);
 	string selecionaSave();
 	vector<string> getListaJogosSalvos();
 	bool verificaArquivosExistentes(string nomeArquivo);
+	void recebeItens();
 private:
 	Jogador* jogador;
 	Cena* cenaAtual;

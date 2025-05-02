@@ -38,26 +38,49 @@ void Monstro::montaMonstro(NomesMonstros nomeMonstro) {
 
 		pItem = new Item(pItem->getNomesItem(sItem));
 	}
-	
+}
+
+int Monstro::getProvisao() {
+	return provisao;
+}
+int Monstro::getTesouro() {
+	return tesouro;
+}
+Item* Monstro::getItem() {
+	return pItem;
 }
 
 string Monstro::getStringMonstro(NomesMonstros nome) {
 	switch (nome) {
-		case Dragao: return "Dragão";
-		case NomeIndefinido: return "";
+	case Dragao: return "Dragão";
+	case Aranha: return "Aranha";
+	case Esqueleto: return "Esqueleto";
+	case Fantasma: return "Fantasma";
+	case Lobisomem: return "Lobisomem";
+	case MonstroIndefinido: return "";
+	default: return "";
 	}
 }
 
 NomesMonstros Monstro::getNomeMonstro(string strNome) {
-	if (strNome == "Dragao" || strNome == "dragao" || strNome == "Dragão" || strNome == "dragão") return Dragao;
-	else if (strNome == "") return MonstroIndefinido;
+	transform(strNome.begin(), strNome.end(), strNome.begin(), ::tolower);
+
+	if (strNome == "dragao" || strNome == "dragão") return Dragao;
+	else if (strNome == "aranha") return Aranha;
+	else if (strNome == "esqueleto") return Esqueleto;
+	else if (strNome == "fantasma") return Fantasma;
+	else if (strNome == "lobisomem") return Lobisomem;
 	else return MonstroIndefinido;
-	
 }
 
 string Monstro::getArquivoMonstro(NomesMonstros nome) {
 	switch (nome) {
-		case Dragao: return "arquivos/monstros/dragao.txt";
-		case NomeIndefinido: return "";
+	case Dragao: return "arquivos/monstros/dragao.txt";
+	case Aranha: return "arquivos/monstros/aranha.txt";
+	case Esqueleto: return "arquivos/monstros/esqueleto.txt";
+	case Fantasma: return "arquivos/monstros/fantasma.txt";
+	case Lobisomem: return "arquivos/monstros/lobisomem.txt";
+	case MonstroIndefinido: return "";
+	default: return "";
 	}
 }

@@ -20,12 +20,13 @@ public:
 	void geraMultiplicador();
 
 	void perguntaUsarInventario();
-	int get_resultado();
+	bool getResultado();
+	void usarItem(Item* pItem);
 private:
 	void turno();
 	Monstro* monstro;
 	Jogador* jogador;
 	double multiplicador;
-	int resultado;
+	bool resultado;
 };
 

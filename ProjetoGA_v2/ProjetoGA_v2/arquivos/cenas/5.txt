@@ -1,11 +1,11 @@
-1;1
+0;1
 #
-SEGUNDO ARQUIVOOOOOOOOOOOOOOOOOOOOOOOO
+A passagem estreita leva a uma sala com o chão repleto de runas brilhantes. Quando você pisa, uma Aranha surge do teto!
 #
-I: garras das trevas;w;1;1;0
+end
 #
-bla bla bla;teste teste test
+end
 #
-arquivos/cenas/4.txt;arquivos/cenas/5.txt
+arquivos/cenas/7.txt;arquivos/cenas/gameover.txt
 #
-monstro1.txt
+aranha

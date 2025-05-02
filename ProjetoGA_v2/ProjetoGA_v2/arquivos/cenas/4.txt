@@ -1,11 +1,11 @@
-1;1
+1;0
 #
-SEGUNDO ARQUIVOOOOOOOOOOOOOOOOOOOOOOOO
+A sala está iluminada por tochas azuis. No centro, um baú reforçado com correntes emite um brilho sinistro.
 #
-I: garras das trevas;w;1;1;0
+espada longa
 #
-bla bla bla;teste teste test
+Abrir o baú;Investigar os afrescos na parede
 #
-arquivos/cenas/4.txt;arquivos/cenas/5.txt
+arquivos/cenas/7.txt;arquivos/cenas/8.txt
 #
-monstro1.txt
+end

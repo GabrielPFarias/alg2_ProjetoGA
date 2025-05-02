@@ -2,10 +2,12 @@
 #include "Personagem.h"
 #include <string>
 #include "util.h"
+#include <algorithm>
+#include <cctype>  
 using namespace std;
 
 enum NomesMonstros {
-	Dragao, MonstroIndefinido
+	Dragao, Aranha, Esqueleto, Fantasma, Lobisomem, MonstroIndefinido
 };
 
 class Monstro : public Personagem
@@ -21,6 +23,7 @@ public:
 
 	int getProvisao();
 	int getTesouro();
+	Item* getItem();
 
 	string getStringMonstro(NomesMonstros);
 	NomesMonstros getNomeMonstro(string);

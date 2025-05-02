@@ -25,6 +25,8 @@ public:
 	void addTesouro(int);
 	void rmTesouro(int);
 
+	bool temItem(NomesItens nomeItem);
+
 	void imprimir();
 	void imprimirResumido(); //usado para a cena de batalha. imprime so so os nomes
 	string getTodosDados();

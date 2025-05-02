@@ -1,11 +1,11 @@
 0;1
 #
-Agora você ta numa batalha, to lendo o arquivo
+Ao forçar a porta enferrujada, você é recebido por um Esqueleto! Ele brande uma adaga sombria e avança.
 #
-end
+adaga sombria
 #
 end
 #
 arquivos/cenas/4.txt;arquivos/cenas/gameover.txt
 #
-dragao
+esqueleto

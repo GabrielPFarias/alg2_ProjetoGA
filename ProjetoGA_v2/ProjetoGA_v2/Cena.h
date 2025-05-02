@@ -4,6 +4,7 @@
 #include <vector>
 #include "util.h" 
 #include "Monstro.h"
+#include "Batalha.h"
 
 using namespace std;
 
@@ -27,7 +28,7 @@ public:
 	vector<string> getTextosEscolhas();
 	vector<string> getArquivosEscolhas();
 
-	void getEscolhaJogador(string);
+	void getProximaCena(string);
 private:
 	string nomeArquivo;
 	bool bItem;
@@ -39,5 +40,6 @@ private:
 	string arqMonstro;
 	bool bFim;
 	Monstro* pMonstro;
+	Batalha* batalha;
 };
 

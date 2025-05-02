@@ -1,0 +1,11 @@
+0;1
+#
+A parede se abre, revelando um túnel úmido. Lá dentro, uma Aranha guarda um baú pequeno!
+#
+end
+#
+end
+#
+arquivos/cenas/16.txt;arquivos/cenas/gameover.txt
+#
+aranha

@@ -1,11 +1,11 @@
-1;1
+0;0
 #
-SEGUNDO ARQUIVOOOOOOOOOOOOOOOOOOOOOOOO
+A passagem desemboca em uma câmara com um mosaico no chão. Três símbolos estão desgastados: um corvo, uma espada e um cálice.
 #
-I: garras das trevas;w;1;1;0
+end
 #
-bla bla bla;teste teste test
+Pisar no corvo;Pisar na espada
 #
-arquivos/cenas/4.txt;arquivos/cenas/5.txt
+arquivos/cenas/8.txt;arquivos/cenas/gameover.txt
 #
-monstro1.txt
+end

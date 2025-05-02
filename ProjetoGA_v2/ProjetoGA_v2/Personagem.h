@@ -18,6 +18,8 @@ public:
     void setHabilidade(int novaHabilidade);
     void setEnergia(double novaEnergia);
     void setSorte(int novaSorte);
+    void rmEnergia(double valor);
+    void addEnergia(double valor);
 
 protected:
 	//string nome;

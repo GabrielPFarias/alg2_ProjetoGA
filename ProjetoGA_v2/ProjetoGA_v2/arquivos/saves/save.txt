@@ -1,1 +1,1 @@
-arquivos/cenas/1.txt#joao;Guerreiro;10;15;11;Porrete, Livro De Feitiços
+arquivos/cenas/4.txt#222;Mago;13;16,000000;6;80.0.Feitiço,Livro de Feitiços,,Espada Longa

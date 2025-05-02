@@ -1,11 +1,11 @@
-1;1
+1;0
 #
-TERCEIRO ARQUIVOOOOOOOOOOOOO
+Você encontra um túnel escondido atrás de uma cascata. Dentro, há um Amuleto brilhando no chão. Na sua frente, duas passagens se dividem:
 #
-I: garras das trevas;w;1;1;0
+amuleto
 #
-bla bla bla;teste teste test
+Seguir pela passagem esquerda;Seguir pela passagem direita
 #
-arquivos/cenas/gameover.txt;arquivos/cenas/gameover.txt
+arquivos/cenas/5.txt;arquivos/cenas/6.txt
 #
-monstro1.txt
+end

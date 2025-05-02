@@ -34,3 +34,9 @@ void Personagem::setEnergia(double novaEnergia) {
 void Personagem::setSorte(int novaSorte) {
     sorte = novaSorte;
 }
+void Personagem::rmEnergia(double valor) {
+    energia = energia - valor;
+}
+void Personagem::addEnergia(double valor) {
+    energia = energia + valor;
+}

@@ -1,6 +1,8 @@
 #pragma once
 #include <string>
 #include "util.h"
+#include <algorithm>
+#include <cctype> 
 using namespace std;
 
 enum NomesItens {
@@ -8,6 +10,13 @@ enum NomesItens {
 	LivroDeFeiticos,
 	Feitico,
 	Chave,
+	Amuleto,
+	AdagaSombria,
+	ArmaduraDePlacas,
+	EscudoDeMadeira,
+	EspadaLonga,
+	Machado,
+	SimboloDaSerpente,
 	NomeIndefinido
 };
 
@@ -20,10 +29,12 @@ class Item
 public:
 	Item();
 	Item(NomesItens);
-	Item(NomesItens nome, TiposDeItens tipo, bool combate, int FA, int dano);
+	Item(NomesItens nome, TiposDeItens tipo, bool itemMagico, bool combate, int FA, int dano);
+	Item(string nome);
 
 	NomesItens getNome();
 	TiposDeItens getTipo();
+	bool getItemMagico();
 	bool getCombate();
 	int getFA();
 	int getDano();
@@ -34,17 +45,21 @@ public:
 	void setFA(int FA);
 	void setDano(int dano);
 
+
+	bool bCombate(TiposDeItens tipoItem);
+
 	void montaItem(NomesItens nomeDeItem);
 
 	string getArquivoItens(NomesItens nome);
 	string getStringNomesItem(NomesItens nome);
 	NomesItens getNomesItem(string nome);
-	TiposDeItens getTipoDeItens(NomesItens nome);
+	TiposDeItens getTipoDeItens(string sTipo);
 	string getTipoDeItensSignificado(TiposDeItens tipo);
 
 private:
 	NomesItens nome;
 	TiposDeItens tipo;
+	bool itemMagico;
 	bool combate;
 	int FA;
 	int dano;

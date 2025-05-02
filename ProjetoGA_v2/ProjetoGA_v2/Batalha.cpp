@@ -14,26 +14,67 @@ Batalha::Batalha(Monstro* monstro, Jogador* jogador) {
 void Batalha::iniciaBatalha() {
     setlocale(LC_ALL, "pt_BR.UTF-8");
 
-    while (jogador->getEnergia() > 0 && monstro->getEnergia() > 0) {
-        cout << "Escolha o que deseja fazer na batalha\n\n(1) ATACAR\n(2) USAR MAGIA\n(3) FUGIR" << endl;
+    while (1) {
+        cout << "Escolha o que deseja fazer na batalha\n\n(1) Atacar\n(2) Usar item\n(3) Fugir" << endl;
         string escolha = pressiona_escolha();
         if (escolha == "1") {
+            multiplicador = 2;
             turno();
         }
         else if (escolha == "2") {
-            //Usar Magia;
+            bool itemValido = false;
+            while (itemValido == false) {
+                limpar_tela();
+                jogador->imprimirInventarioResumido();
+                string escolha = pressiona_escolha();
+                if (stoi(escolha) == jogador->getInventario()->getItens().size() + 1) {
+                    limpar_tela();
+                    break;
+                }
+                else {
+                    while (1) {
+                        Item* itemEscolhido = jogador->getInventario()->getItens()[stoi(escolha) - 1];
+                        if (itemEscolhido->getCombate()) {
+                            if (itemEscolhido->getItemMagico()) {
+                                if (jogador->getMagiaLiberada()) {
+                                    usarItem(itemEscolhido);
+                                    itemValido = true;
+                                    break;
+                                }
+                                else {
+                                    cout << "Para utilizar o Feitiço, você deve possuir o Livro de Feitiços ou ser um MAGO" << endl;
+                                    pressiona_prosseguir();
+                                    break;
+                                }
+                            }
+                            else {
+                                usarItem(itemEscolhido);
+                                itemValido = true;
+                                break;
+                            }
+                        }
+                        else {
+                            cout << "\nO item deve ser do tipo Arma (W) para ser utilizado. Escolha outro item." << endl;
+                            pressiona_prosseguir();
+                            break;
+                        }
+                    }
+                }
+            }
         }
         else if (escolha == "3") {
             break;
         }
 
-        if (jogador->getEnergia() <= 0)
-            resultado = -1;
-        else if (monstro->getEnergia() <= 0)
-            resultado = 1;
+        if (jogador->getEnergia() <= 0) {
+            resultado = false;
+            break;
+        }
+        else if (monstro->getEnergia() <= 0) {
+            resultado = true;
+            break;
+        } 
     }
-
-    return;
 }
 
 void Batalha::turno() {
@@ -42,13 +83,13 @@ void Batalha::turno() {
 
     if (faPersonagem > faMonstro) {
         geraMultiplicador();
-        perguntaUsarInventario();
+        //perguntaUsarInventario();
 
         monstro->setEnergia(monstro->getEnergia() - multiplicador);
         cout << "Voce ganhou o turno!\nEnergia monstro: " << monstro->getEnergia() << endl;
     }
     else if (faMonstro > faPersonagem) {
-        jogador->setEnergia(jogador->getEnergia() - 2);
+        jogador->rmEnergia(2);
         cout << "Voce perdeu o turno!\nSua energia: " << jogador->getEnergia() << endl;   
     }
     else {
@@ -99,6 +140,12 @@ void Batalha::perguntaUsarInventario() {
     }
 }
 
-int Batalha::get_resultado() {
+bool Batalha::getResultado() {
     return resultado;
+}
+
+void Batalha::usarItem(Item* pItem) {
+    int danoItem = pItem->getDano();
+    monstro->rmEnergia(danoItem);
+    jogador->rmItemInventario(pItem);
 }
