@@ -66,8 +66,19 @@ void Batalha::iniciaBatalha() {
         }
 
         case 3:
-            break;
-
+            if (jogador->temItem(Chave)) {
+                cout << u8"Parabéns, por possuir o item Chave, você consegue fugir desta batalha" << endl;
+                end = true;
+                resultado = true;
+                pressiona_prosseguir();
+                limpar_tela();
+            }
+            else {
+                cout << u8"Você não pode fugir desta batalha pois não possue o item Chave." << endl;
+                pressiona_prosseguir();
+                limpar_tela();
+                break;
+            }
         case 4:
             end = true;
             resultado = true;

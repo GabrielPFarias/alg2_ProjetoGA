@@ -2,7 +2,7 @@
 #
 Você está diante da Fortaleza das Sombras. Dizem que ela guarda o Olho de Virell, um artefato de poder sombrio.
 #
-livro de feiticos
+chave
 #
 Entrar pela porta principal;Procurar por uma entrada secreta
 #
