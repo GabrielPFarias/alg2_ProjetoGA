@@ -18,7 +18,9 @@ void Batalha::iniciaBatalha() {
         cout << "Escolha o que deseja fazer na batalha\n\n(1) Atacar\n(2) Usar item\n(3) Fugir" << endl;
         string escolha = pressiona_escolha();
         int opcao = stoi(escolha);  // converter string para inteiro
-
+        if (jogador->temItem(ArmaduraDePlacas)) {
+            monstro->setHabilidade(monstro->getHabilidade()-1);
+        }
         switch (opcao) {
         case 1:
             multiplicador = 2;
