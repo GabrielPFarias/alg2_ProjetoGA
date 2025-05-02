@@ -3,5 +3,5 @@ Eles possuem histórias, mecânicas de jogo e habilidades diferentes.
 
 Qual é sua opção?
 
-(1) MAGO
-(2) GUERREIRO
+- (1) MAGO
+- (2) GUERREIRO

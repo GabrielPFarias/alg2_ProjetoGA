@@ -2,7 +2,7 @@
 #
 Ao forçar a porta enferrujada, você é recebido por um Esqueleto! Ele brande uma adaga sombria e avança.
 #
-adaga sombria
+end
 #
 end
 #

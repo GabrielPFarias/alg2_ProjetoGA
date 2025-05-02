@@ -1,0 +1,11 @@
+0;0
+#
+A porta dourada leva a um aposento sagrado. Uma voz ecoa: “Somente o digno pode tocar o Olho de Virell.” Uma passagem se abre atrás do trono.
+#
+end
+#
+Seguir pela passagem;Voltar e tentar outro caminho
+#
+arquivos/cenas/21.txt;arquivos/cenas/21.txt
+#
+end

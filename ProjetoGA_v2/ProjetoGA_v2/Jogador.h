@@ -48,6 +48,7 @@ public:
 	void rmItemInventario(Item*);
 	void imprimirInventario();
 	void imprimirInventarioResumido();
+	bool temItem(NomesItens nomeItem);
 
 	Classe escolhaMagoGuerreiro(string escolha);
 	string getTodosDados();

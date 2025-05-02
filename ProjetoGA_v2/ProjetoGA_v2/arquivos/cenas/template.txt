@@ -1,0 +1,11 @@
+tem item? (bool);essa tela é uma batalha? (bool)
+#
+texto introdutorio da cena
+#
+item, se houver (opcional)
+#
+escolha 1;escolha 2
+#
+arquivos/cenas/arquivo escolha 1.txt;arquivos/cenas/arquivo escolha 2.txt
+#
+monstro apenas nas batalhas.

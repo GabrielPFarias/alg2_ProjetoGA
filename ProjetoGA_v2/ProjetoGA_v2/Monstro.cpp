@@ -39,7 +39,9 @@ void Monstro::montaMonstro(NomesMonstros nomeMonstro) {
 		pItem = new Item(pItem->getNomesItem(sItem));
 	}
 }
-
+NomesMonstros Monstro::getNome() {
+	return nome;
+}
 int Monstro::getProvisao() {
 	return provisao;
 }
@@ -52,7 +54,7 @@ Item* Monstro::getItem() {
 
 string Monstro::getStringMonstro(NomesMonstros nome) {
 	switch (nome) {
-	case Dragao: return "Dragão";
+	case Dragao: return u8"Dragão";
 	case Aranha: return "Aranha";
 	case Esqueleto: return "Esqueleto";
 	case Fantasma: return "Fantasma";

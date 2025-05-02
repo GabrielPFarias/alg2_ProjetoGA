@@ -1,0 +1,11 @@
+0;0
+#
+O portal leva a um salão dividido. Um caminho parece levar à biblioteca de um antigo mago, o outro, a escadarias que descem para as profundezas.
+#
+end
+#
+Descer as escadas;Explorar a biblioteca
+#
+arquivos/cenas/13.txt;arquivos/cenas/14.txt
+#
+end

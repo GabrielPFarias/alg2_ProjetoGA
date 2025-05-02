@@ -1,6 +1,6 @@
 1;0
 #
-Você encontra um túnel escondido atrás de uma cascata. Dentro, há um Amuleto brilhando no chão. Na sua frente, duas passagens se dividem:
+VocÃª encontra um tÃºnel escondido atrÃ¡s de uma cascata. Dentro, hÃ¡ um Amuleto brilhando no chÃ£o. Na sua frente, duas passagens se dividem:
 #
 amuleto
 #

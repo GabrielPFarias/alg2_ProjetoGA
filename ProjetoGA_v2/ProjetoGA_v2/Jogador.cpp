@@ -3,10 +3,14 @@
 #include <locale>
 
 Jogador::Jogador() 
-	: nome(""), Personagem(0, 0, 0), classe(Indefinido), inventario(nullptr) {}
+	: nome(""), Personagem(0, 0, 0), classe(Indefinido), inventario(nullptr) {
+	setlocale(LC_ALL, "pt_BR.UTF-8");
+}
 
 Jogador::Jogador(string nome, int habilidade, double energia, int sorte, Classe classe, Inventario* inventario)
-	: nome(nome), Personagem(habilidade, energia, sorte), classe(classe), inventario(inventario) {}
+	: nome(nome), Personagem(habilidade, energia, sorte), classe(classe), inventario(inventario) {
+	setlocale(LC_ALL, "pt_BR.UTF-8");
+}
 
 int pedirValor(string atributo, int* pontosRestantes, int minimoDepois) {
 	int valor;
@@ -62,14 +66,18 @@ void Jogador::addItemInventario(Item* item) {
 void Jogador::rmItemInventario(Item* item) {
 	inventario->rmItem(item);
 }
+bool Jogador::temItem(NomesItens nomeItem) {
+	return inventario->temItem(nomeItem);
+}
 void Jogador::inicializaJogador() {
+	setlocale(LC_ALL, "pt_BR.UTF-8");
 	inventario = new Inventario();
 	limpar_tela();
-	cout << "Deseja configurar seu personagem manualmente ou definí-lo automaticamente de forma aleatória?" << endl;
-	cout << "\n(1) Manual\n(2) Automático" << endl;
+	cout << u8"Deseja configurar seu personagem manualmente ou definí-lo automaticamente de forma aleatória?" << endl;
+	cout << u8"\n- (1) Manual\n- (2) Automático" << endl;
 	string escolha = pressiona_escolha();
 	while (escolha != "1" && escolha != "2") {
-		cout << "Valor inválido. Insira novamente:  " << endl;
+		cout << u8"Valor inválido. Insira novamente:  " << endl;
 		escolha = pressiona_escolha();
 	}
 	if (escolha == "1") {
@@ -113,7 +121,7 @@ void Jogador::imprimirInventario() {
 	setlocale(LC_ALL, "pt_BR.UTF-8"); // Para usar acentos e cedilha no terminal
 	limpar_tela();
 	// Formatação com setw para alinhar as colunas
-	cout << "Digite 'e' sempre que quiser abrir o inventario" << endl;
+	cout << "Digite 'e' sempre que quiser abrir o inventario\n" << endl;
 	cout << left << setw(20) << "NOME DO JOGADOR:" << setw(20) << getNome() << endl;
 	cout << left << setw(20) << "CLASSE:" << setw(20)
 		<< (classe == Mago ? "MAGO" : (classe == Guerreiro ? "GUERREIRO" : "INDEFINIDO")) << endl;

@@ -1,0 +1,1 @@
+arquivos/cenas/7.txt#333;Mago;14;12,000000;8;80.0.Feitiço,Livro de Feitiços,,Espada Longa

@@ -1,11 +1,11 @@
-1;1
+0;1
 #
-SEGUNDO ARQUIVOOOOOOOOOOOOOOOOOOOOOOOO
+Um rugido ensurdecedor corta o ar. Um Dragão menor, mas ainda mortal, surge do teto em ruínas, cuspindo labaredas. Prepare-se para lutar!
 #
-I: garras das trevas;w;1;1;0
+end
 #
-bla bla bla;teste teste test
+end
 #
-arquivos/cenas/4.txt;arquivos/cenas/5.txt
+arquivos/cenas/11.txt;arquivos/cenas/gameover.txt
 #
-monstro1.txt
+dragao

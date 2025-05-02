@@ -1,11 +1,11 @@
-1;0  
-#  
-Os afrescos retratam uma batalha antiga contra um dragão. Um detalhe chama atenção: um cavaleiro usando um escudo com o símbolo da serpente.
-#  
-simbolo da serpente  
-#  
-Tocar no símbolo;Voltar ao baú  
-#  
-arquivos/cenas/15.txt;arquivos/cenas/4.txt  
-#  
-end  
+1;0
+#
+VocÃª encontra uma porta parcialmente entreaberta, com um sÃ­mbolo antigo esculpido na madeira. Dentro, a sala estÃ¡ vazia, exceto por dois corredores: um Ã  frente e outro Ã  esquerda.
+#
+simbolo da serpente
+#
+Virar Ã  esquerda;Seguir em frente
+#
+arquivos/cenas/9.txt;arquivos/cenas/10.txt
+#
+end

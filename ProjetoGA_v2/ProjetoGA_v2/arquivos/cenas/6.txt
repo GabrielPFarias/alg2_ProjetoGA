@@ -1,10 +1,10 @@
-0;0
+1;0
 #
-A passagem desemboca em uma câmara com um mosaico no chão. Três símbolos estão desgastados: um corvo, uma espada e um cálice.
+VocÃª avanÃ§a pela passagem estreita. O ar fica mais quente. Logo Ã  frente, hÃ¡ um pedestal com um SÃ­mbolo da Serpente entalhado em ouro. VocÃª coleta este item. VocÃª avista um quadrado desenhado no chÃ£o.
 #
-end
+sÃ­mbolo da serpente
 #
-Pisar no corvo;Pisar na espada
+Ignorar e seguir;Pisar no quadrado
 #
 arquivos/cenas/8.txt;arquivos/cenas/gameover.txt
 #

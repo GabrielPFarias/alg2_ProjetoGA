@@ -1,0 +1,11 @@
+0;0
+#
+Você encontra livros ancestrais e artefatos de magia. Um deles pulsa com uma luz roxa. Duas portas encantadas bloqueiam caminhos opostos.
+#
+end
+#
+Forçar a porta à esquerda;Forçar a porta à direita
+#
+arquivos/cenas/13.txt;arquivos/cenas/16.txt
+#
+end

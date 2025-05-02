@@ -1,0 +1,1 @@
+arquivos/cenas/7.txt#262;Mago;13;12,000000;9;175.0.Livro de Feitiços,Amuleto,Machado,Armadura de Placas

@@ -1,10 +1,10 @@
-1;0
+0;0
 #
-A sala est� iluminada por tochas azuis. No centro, um ba� refor�ado com correntes emite um brilho sinistro.
+O salão está escuro e cheira a mofo. Velas apagadas estão presas nas paredes de pedra. Ao fundo, você ouve passos leves — talvez um inimigo, ou talvez algo mais antigo. Você achou uma Espada Longa!
 #
-espada longa
+end
 #
-Abrir o ba�;Investigar os afrescos na parede
+Seguir em direção ao som;Esconder-se nas sombras
 #
 arquivos/cenas/7.txt;arquivos/cenas/8.txt
 #

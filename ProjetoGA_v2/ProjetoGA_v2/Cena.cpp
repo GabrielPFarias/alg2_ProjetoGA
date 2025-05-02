@@ -44,13 +44,18 @@ void Cena::montaCena(){
 	if (temItem()) {
 		pItem = new Item(NomeIndefinido);
 		pItem->montaItem(pItem->getNomesItem(sItem));
+		limpar_tela();
+		cout << "Voce achou o item " << pItem->getStringNomesItem(pItem->getNome()) << u8" e ele foi incorporado ao seu inventário" << endl;
+		pressiona_prosseguir();
+		limpar_tela();
 	}
-
-	vector<string> parteTextosEscolhas = split(sTextosEscolhas, ';');
-	if (parteTextosEscolhas.size() < 2) {
-		parteTextosEscolhas.resize(2, "");
+	if (temBatalha() == false) {
+		vector<string> parteTextosEscolhas = split(sTextosEscolhas, ';');
+		if (parteTextosEscolhas.size() < 2) {
+			parteTextosEscolhas.resize(2, "");
+		}
+		textosEscolhas = parteTextosEscolhas;
 	}
-	textosEscolhas = parteTextosEscolhas;
 
 	vector<string> parteArquivosEscolhas = split(sArquivosEscolhas, ';');
 	if (parteArquivosEscolhas.size() < 2) {

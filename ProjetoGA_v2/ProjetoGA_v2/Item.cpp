@@ -90,7 +90,7 @@ string Item::getArquivoItens(NomesItens nome) {
     case LivroDeFeiticos:       return "arquivos/itens/livro_de_feiticos.txt";
     case Feitico:               return "arquivos/itens/feitico.txt";
     case Chave:                 return "arquivos/itens/chave.txt";
-    case Amuleto:               return "arquivos/itens/amulet.txt";
+    case Amuleto:               return "arquivos/itens/amuleto.txt";
     case AdagaSombria:          return "arquivos/itens/adaga_sombria.txt";
     case ArmaduraDePlacas:      return "arquivos/itens/armadura_de_placas.txt";
     case EscudoDeMadeira:       return "arquivos/itens/escudo_de_madeira.txt";
@@ -126,7 +126,7 @@ NomesItens Item::getNomesItem(string nome) {
     if (nome == "feitico" || nome == "feitiço") return Feitico;
     if (nome == "chave") return Chave;
     if (nome == "amuleto") return Amuleto;
-    if (nome == "adaga sombria") return AdagaSombria;
+    if (nome == "adaga_sombria") return AdagaSombria;
     if (nome == "armadura de placas") return ArmaduraDePlacas;
     if (nome == "escudo de madeira") return EscudoDeMadeira;
     if (nome == "espada longa") return EspadaLonga;

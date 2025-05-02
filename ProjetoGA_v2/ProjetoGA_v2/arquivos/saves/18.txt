@@ -1,0 +1,1 @@
+arquivos/cenas/18.txt#2;Mago;16;12,000000;6;581.0.,,Espada Longa,Chave

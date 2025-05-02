@@ -1,0 +1,11 @@
+0;1
+#
+Você se depara com o Guardião do Olho de Virell. Uma figura encapuzada empunha uma espada flamejante, envolta por aura negra. A última batalha começa!
+#
+end
+#
+end
+#
+arquivos/cenas/victory_royale.txt;arquivos/cenas/gameover.txt
+#
+fantasma

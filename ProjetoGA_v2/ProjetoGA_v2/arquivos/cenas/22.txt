@@ -1,0 +1,11 @@
+1;0
+#
+Você surge em uma sala circular sem janelas, apenas com uma escada espiral subindo até a escuridão. Ao lado, uma placa diz: “Voltar é desistir. Subir é enfrentar.”
+#
+espada longa
+#
+Subir pela escada;Permanecer e refletir
+#
+arquivos/cenas/21.txt;arquivos/cenas/21.txt
+#
+end

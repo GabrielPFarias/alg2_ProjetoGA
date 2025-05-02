@@ -13,56 +13,71 @@ Batalha::Batalha(Monstro* monstro, Jogador* jogador) {
 }
 void Batalha::iniciaBatalha() {
     setlocale(LC_ALL, "pt_BR.UTF-8");
-
-    while (1) {
+    bool end = false;
+    while (end == false) {
         cout << "Escolha o que deseja fazer na batalha\n\n(1) Atacar\n(2) Usar item\n(3) Fugir" << endl;
         string escolha = pressiona_escolha();
-        if (escolha == "1") {
+        int opcao = stoi(escolha);  // converter string para inteiro
+
+        switch (opcao) {
+        case 1:
             multiplicador = 2;
             turno();
-        }
-        else if (escolha == "2") {
+            break;
+
+        case 2: {
             bool itemValido = false;
-            while (itemValido == false) {
+            while (!itemValido) {
                 limpar_tela();
                 jogador->imprimirInventarioResumido();
-                string escolha = pressiona_escolha();
-                if (stoi(escolha) == jogador->getInventario()->getItens().size() + 1) {
+                string escolhaItem = pressiona_escolha();
+
+                int indiceItem = stoi(escolhaItem);
+                if (indiceItem == jogador->getInventario()->getItens().size() + 1) {
                     limpar_tela();
                     break;
                 }
-                else {
-                    while (1) {
-                        Item* itemEscolhido = jogador->getInventario()->getItens()[stoi(escolha) - 1];
-                        if (itemEscolhido->getCombate()) {
-                            if (itemEscolhido->getItemMagico()) {
-                                if (jogador->getMagiaLiberada()) {
-                                    usarItem(itemEscolhido);
-                                    itemValido = true;
-                                    break;
-                                }
-                                else {
-                                    cout << "Para utilizar o Feitiço, você deve possuir o Livro de Feitiços ou ser um MAGO" << endl;
-                                    pressiona_prosseguir();
-                                    break;
-                                }
-                            }
-                            else {
-                                usarItem(itemEscolhido);
-                                itemValido = true;
-                                break;
-                            }
+
+                Item* itemEscolhido = jogador->getInventario()->getItens()[indiceItem - 1];
+                if (itemEscolhido->getCombate()) {
+                    if (itemEscolhido->getItemMagico()) {
+                        if (jogador->getMagiaLiberada()) {
+                            usarItem(itemEscolhido);
+                            itemValido = true;
                         }
                         else {
-                            cout << "\nO item deve ser do tipo Arma (W) para ser utilizado. Escolha outro item." << endl;
+                            cout << "Para utilizar o Feitiço, você deve possuir o Livro de Feitiços ou ser um MAGO" << endl;
                             pressiona_prosseguir();
-                            break;
                         }
                     }
+                    else {
+                        usarItem(itemEscolhido);
+                        itemValido = true;
+                    }
+                }
+                else {
+                    cout << "\nO item deve ser do tipo Arma (W) para ser utilizado. Escolha outro item." << endl;
+                    pressiona_prosseguir();
                 }
             }
+            break;
         }
-        else if (escolha == "3") {
+
+        case 3:
+            break;
+
+        case 4:
+            end = true;
+            resultado = true;
+            break;
+
+        case 5:
+            end = true;
+            resultado = false;
+            break;
+
+        default:
+            cout << "Opção inválida." << endl;
             break;
         }
 
@@ -95,7 +110,7 @@ void Batalha::turno() {
     else {
         cout << "Empatou!" << endl;
     }
-    pressiona_prosseguir();
+    //pressiona_prosseguir();
     return;
 }
 
@@ -147,5 +162,10 @@ bool Batalha::getResultado() {
 void Batalha::usarItem(Item* pItem) {
     int danoItem = pItem->getDano();
     monstro->rmEnergia(danoItem);
+    limpar_tela();
+    cout << "A vida do monstro foi diminuida em "<< danoItem << " pontos." << endl;
+    cout << "O monstro agora possui " << monstro->getEnergia() << " de vida" << endl;
+    pressiona_prosseguir();
+    limpar_tela();
     jogador->rmItemInventario(pItem);
 }

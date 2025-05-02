@@ -1,0 +1,11 @@
+1;0
+#
+Você adentra um salão hexagonal onde o chão brilha com runas antigas. No centro, duas portas imponentes: uma dourada, outra coberta por musgo.
+#
+feitico
+#
+Abrir a porta dourada;Abrir a porta coberta de musgo
+#
+arquivos/cenas/20.txt;arquivos/cenas/21.txt
+#
+end

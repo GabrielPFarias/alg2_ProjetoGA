@@ -1,0 +1,11 @@
+0;0
+#
+Ao atravessar o corredor oculto, você encontra uma cripta envolta por fumaça púrpura. Dois altares lado a lado parecem pulsar com energia instável.
+#
+end
+#
+Aproximar-se do altar da esquerda;Aproximar-se do altar da direita
+#
+arquivos/cenas/21.txt;arquivos/cenas/22.txt
+#
+end

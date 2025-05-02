@@ -24,12 +24,14 @@ void Jogo::iniciaJogo() {
 			jogador->inicializaJogador();
 			jogador->imprimirInventario();
 			pressiona_prosseguir();
+			limpar_tela();
 			cenaAtual->setArquivoCena("arquivos/cenas/1.txt");
 			break;
 		case 2:
 			carregar();
 			break;
 		case 3:
+			limpar_tela();
 			cenaAtual->setArquivoCena("arquivos/tela_creditos.txt");
 			tela.exibirTexto();
 			pressiona_prosseguir();
@@ -45,8 +47,10 @@ void Jogo::iniciaJogo() {
 				limpar_tela();
 				break;
 			}
+			limpar_tela();
 			tela.exibirTexto();
-			fimDeJogo == cenaAtual->temFim();
+
+			fimDeJogo = cenaAtual->temFim();
 			if (fimDeJogo) {
 				break;
 			}
@@ -59,6 +63,10 @@ void Jogo::iniciaJogo() {
 					string sProximaCena = "";
 					if (batalha->getResultado()) {
 						sProximaCena = "1"; //ganhou a batalha
+						limpar_tela();
+						cout << "Parabéns você venceu a batalha!" << endl;
+						pressiona_prosseguir();
+						limpar_tela();
 						recebeItens();
 					}
 					else {
@@ -69,13 +77,21 @@ void Jogo::iniciaJogo() {
 				else {
 					tela.exibirEscolhas();
 					if (cenaAtual->temItem() && itemAdicionado == false) {
-						jogador->addItemInventario(cenaAtual->getItem());
-						itemAdicionado = true;
+						Item* pItem = cenaAtual->getItem();
+						if (jogador->temItem(pItem->getNome()) == false || pItem->getTipo() == W) {
+							jogador->addItemInventario(pItem);
+							itemAdicionado = true;
+						}
 					}
 					string escolha = pressiona_escolha();
+					while (escolha != "e" && escolha != "s" && escolha != "1" && escolha != "2") {
+						cout << u8"\nValor inválido. Envie outro." << endl;
+						escolha = pressiona_escolha();
+					}
 					if (escolha == "e") {
 						jogador->imprimirInventario();
 						pressiona_prosseguir();
+						limpar_tela();
 					}
 					else if (escolha == "s") {
 						salvar();
@@ -84,6 +100,7 @@ void Jogo::iniciaJogo() {
 					}
 					else {
 						cenaAtual->getProximaCena(escolha);
+						limpar_tela();
 						itemAdicionado = false;
 					}
 				}
@@ -127,6 +144,7 @@ void Jogo::carregar() {
 	}
 	string conteudo = acessaArquivo("arquivos/saves/"+save);
 	montaJogo(conteudo);
+	limpar_tela();
 }
 
 string Jogo::selecionaSave() {
@@ -214,4 +232,7 @@ void Jogo::recebeItens() {
 	jogador->addProvisao(provisaoMonstro);
 	jogador->addTesouro(tesouroMonstro);
 	jogador->addItemInventario(itemMonstro);
+	limpar_tela();
+	cout << "O " << pMonstro->getStringMonstro(pMonstro->getNome()) << " possuia um " << itemMonstro->getStringNomesItem(itemMonstro->getNome()) << " que foi incorporado ao seu inventario." << endl;
+	pressiona_prosseguir();
 }

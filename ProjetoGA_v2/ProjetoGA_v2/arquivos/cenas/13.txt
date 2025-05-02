@@ -1,0 +1,11 @@
+0;0
+#
+Você caminha por um túnel de pedras úmidas até encontrar dois caminhos: um exala calor e outro emana um vento gélido.
+#
+end
+#
+Entrar no túnel gelado;Entrar no túnel quente
+#
+arquivos/cenas/gameover.txt;arquivos/cenas/15.txt
+#
+end

@@ -1,11 +1,11 @@
-0;1
+0;0
 #
-A parede se abre, revelando um túnel úmido. Lá dentro, uma Aranha guarda um baú pequeno!
-#
-end
+VocÃª atravessa a cÃ¢mara ardente e encontra uma runa flutuante em meio ao fogo. Dois caminhos aparecem: um escuro, outro com ventos que cantam.
 #
 end
 #
-arquivos/cenas/16.txt;arquivos/cenas/gameover.txt
+Seguir pelo caminho dos ventos;Entrar no caminho escuro
 #
-aranha
+arquivos/cenas/gameover.txt;arquivos/cenas/18.txt
+#
+end

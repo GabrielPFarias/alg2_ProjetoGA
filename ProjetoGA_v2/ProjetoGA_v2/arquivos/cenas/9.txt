@@ -1,11 +1,11 @@
-1;1
+0;0
 #
-SEGUNDO ARQUIVOOOOOOOOOOOOOOOOOOOOOOOO
+As paredes desse corredor estão cobertas de tapeçarias rasgadas e mofo. Você sente que está sendo observado. Há um baú aberto com vestígios de saque.
 #
-I: garras das trevas;w;1;1;0
+end
 #
-bla bla bla;teste teste test
+Voltar para o corredor anterior;Seguir adiante com cautela
 #
-arquivos/cenas/4.txt;arquivos/cenas/5.txt
+arquivos/cenas/8.txt;arquivos/cenas/10.txt
 #
-monstro1.txt
+end

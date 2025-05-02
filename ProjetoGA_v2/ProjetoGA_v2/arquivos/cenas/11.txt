@@ -1,0 +1,11 @@
+1;0
+#
+Coberto de cinzas, você atravessa a sala onde o dragão jazia. Um brilho azulado emana de um portal no fim do corredor. Você sente que está próximo do fim.
+#
+espada longa
+#
+Atravessar o portal;Descansar antes de seguir
+#
+arquivos/cenas/12.txt;arquivos/cenas/gameover.txt
+#
+end

@@ -2,18 +2,18 @@
 #include <locale>
 
 Inventario::Inventario() {
-    setlocale(LC_ALL, "pt_BR.UTF-8");
+    
     provisao = 0;
     tesouro = 0;
 }
 Inventario::Inventario(vector<Item*> itens, int provisao, int tesouro) {
-    setlocale(LC_ALL, "pt_BR.UTF-8");
+    //setlocale(LC_ALL, "pt_BR.UTF-8");
     this->itens = itens;
     this->provisao = provisao;
     this->tesouro = tesouro;
 }
 Inventario::~Inventario() {
-    setlocale(LC_ALL, "pt_BR.UTF-8");
+    //setlocale(LC_ALL, "pt_BR.UTF-8");
     // Percorra o vetor e delete cada item dinamicamente alocado
     for (auto item : itens) {
         delete item;  // Libera a memória alocada para cada item
@@ -66,6 +66,7 @@ void Inventario::rmTesouro(int valor) {
     }
 }
 void Inventario::imprimir() {
+    setlocale(LC_ALL, "pt_BR.UTF-8");
     cout << "Inventário:" << endl;
     cout << "Provisão: " << provisao << endl;
     cout << "Tesouro: " << tesouro << endl;
@@ -87,6 +88,7 @@ void Inventario::imprimir() {
     }
 }
 void Inventario::imprimirResumido() {
+    setlocale(LC_ALL, "pt_BR.UTF-8");
     vector<string> sItens;
     int i = 0;
     for (i = 0;i < itens.size(); i++) {

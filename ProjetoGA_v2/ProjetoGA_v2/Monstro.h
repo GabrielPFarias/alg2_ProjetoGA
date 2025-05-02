@@ -21,6 +21,7 @@ public:
 	void setProvisao(int);
 	void setTesouro(int);
 
+	NomesMonstros getNome();
 	int getProvisao();
 	int getTesouro();
 	Item* getItem();

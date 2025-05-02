@@ -1,6 +1,6 @@
 0;1
 #
-A passagem estreita leva a uma sala com o chão repleto de runas brilhantes. Quando você pisa, uma Aranha surge do teto!
+Uma figura surge da escuridÃ£o â€” um Lobisomem, olhos vermelhos e presas expostas. Ele rosna e salta contra vocÃª!
 #
 end
 #
@@ -8,4 +8,4 @@ end
 #
 arquivos/cenas/7.txt;arquivos/cenas/gameover.txt
 #
-aranha
+lobisomem

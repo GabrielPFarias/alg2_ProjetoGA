@@ -1,0 +1,11 @@
+1;0
+#
+Você entra em uma galeria de espelhos mágicos. Em cada um, uma imagem diferente reflete sua jornada. Um caminho leva ao santuário final.
+#
+feitico
+#
+Tocar o espelho com luz dourada;Ignorar os espelhos e seguir
+#
+arquivos/cenas/18.txt;arquivos/cenas/19.txt
+#
+end

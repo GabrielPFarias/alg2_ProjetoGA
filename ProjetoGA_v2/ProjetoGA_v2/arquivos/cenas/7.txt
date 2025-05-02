@@ -1,11 +1,11 @@
-0;0
+1;0
 #
-O baú se abre com um rangido. Dentro, apenas um revestimento de veludo roto e um símbolo gravado no fundo: *uma serpente engolindo a própria cauda*.
+ApÃ³s derrotar a criatura nas catacumbas, vocÃª avanÃ§a por um corredor estreito. Um som rÃ­tmico ecoa nas paredes â€” tambores, talvez... ou batimentos de algo colossal.
 #
-end
+armadura de placas
 #
-Investigar o símbolo;Deixar o baú e explorar a fortaleza
+Seguir em direÃ§Ã£o ao som;Explorar a lateral do corredor
 #
-arquivos/cenas/8.txt;arquivos/cenas/9.txt
+arquivos/cenas/9.txt;arquivos/cenas/8.txt
 #
 end
